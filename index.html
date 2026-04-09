@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رسائلي - حلول واتساب الذكية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+        body { font-family: 'Cairo', sans-serif; }
+        .glass-effect { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="sticky top-0 z-50 glass-effect border-b border-gray-200 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold text-green-600">رسائلي</div>
+            <ul class="hidden md:flex space-x-reverse space-x-8 font-medium">
+                <li><a href="#" class="hover:text-green-500">الرئيسية</a></li>
+                <li><a href="#" class="hover:text-green-500">المميزات</a></li>
+                <li><a href="#" class="hover:text-green-500">الأسعار</a></li>
+            </ul>
+            <button class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition">ابدأ الآن</button>
+        </div>
+    </nav>
+
+    <section class="container mx-auto py-20 px-4 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2" data-aos="fade-left">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">تواصل مع عملائك عبر <span class="text-green-600">واتساب</span> بكل سهولة.</h1>
+            <p class="text-lg text-gray-600 mb-8">المنصة الأقوى لإرسال الرسائل الجماعية، التنبيهات اللحظية، وربط متجرك الإلكتروني بأتمتة كاملة.</p>
+            <div class="flex gap-4">
+                <button class="bg-green-600 text-white px-8 py-3 rounded-lg text-lg">جرب مجاناً</button>
+                <button class="border border-green-600 text-green-600 px-8 py-3 rounded-lg text-lg">مشاهدة الفيديو</button>
+            </div>
+        </div>
+        <div class="md:w-1/2 mt-12 md:mt-0" data-aos="zoom-in">
+            <img src="https://via.placeholder.com/600x400" alt="Dashboard" class="rounded-xl shadow-2xl">
+        </div>
+    </section>
+
+    <section class="bg-white py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16">لماذا يختارنا أصحاب المتاجر؟</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition text-center" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">🚀</div>
+                    <h3 class="text-xl font-bold mb-4">سرعة الإرسال</h3>
+                    <p class="text-gray-500">نظام متطور يضمن وصول رسائلك لآلاف العملاء في ثوانٍ معدودة.</p>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
