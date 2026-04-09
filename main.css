@@ -1,0 +1,91 @@
+/* تنسيق الحاوية */
+.card-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    perspective: 1000px; /* لإعطاء عمق بسيط عند الحركة */
+}
+
+
+.custom-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px); /* تأثير الزجاج الضبابي */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    
+    /* ربط الحركة الانتقالية (Transition) */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    
+    /* حركة ظهور عند تحميل الصفحة */
+    animation: slideUpFade 0.8s ease-out forwards;
+}
+
+/* حركة الـ Hover */
+.custom-card:hover {
+    transform: translateY(-15px) scale(1.02); /* يرتفع للأعلى ويكبر قليلاً */
+    background: #ffffff;
+    box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15); /* ظل بلون أخضر خفيف */
+    border-color: #10b981;
+}
+
+/* تنسيق الأيقونة */
+.icon-box {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 30px;
+    transition: transform 0.3s ease;
+}
+
+.custom-card:hover .icon-box {
+    transform: rotate(10deg) scale(1.1); /* دوران بسيط للأيقونة عند الـ Hover */
+}
+
+/* النصوص */
+.card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 12px;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card-link {
+    color: #10b981;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: letter-spacing 0.3s ease;
+}
+
+.custom-card:hover .card-link {
+    letter-spacing: 1px; /* تباعد بسيط للحروف يعطي شعوراً بالحركة */
+}
+
+/* تعريف الـ Keyframes للحركة الابتدائية */
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
